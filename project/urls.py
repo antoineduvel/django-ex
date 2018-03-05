@@ -2,7 +2,7 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from welcome.views import index, health
+from welcome.views import index, health, home
 
 urlpatterns = [
     # Examples:
@@ -12,7 +12,7 @@ urlpatterns = [
     url(r'^$', index),
     url(r'^health$', health),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^accueil$', views.home),
+    url(r'^accueil$', home),
 ]
 
 if settings.DEBUG:
