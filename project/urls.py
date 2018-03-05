@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^health$', health),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accueil$', home),
+    url(r'^article/<id_article>$', views.view_article),
 ]
 
 if settings.DEBUG:
